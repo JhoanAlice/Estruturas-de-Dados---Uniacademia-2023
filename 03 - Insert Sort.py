@@ -1,3 +1,5 @@
+# 3. **Insertion Sort:** Este algoritmo constrói uma lista ordenada um item de cada vez. Ele assume que o primeiro elemento já está ordenado e então, a cada iteração, insere o próximo item na posição correta na parte ordenada da lista. O Insertion Sort tem uma complexidade de tempo O(n²).
+
 # Função para trocar dois elementos de posição em uma lista (não será usada neste exemplo)
 def swap(alist, i, j):
     # Guarda o valor de alist[i] em uma variável temporária

@@ -1,3 +1,5 @@
+# 9. **Pesquisa Sequencial:** Esta é a técnica de pesquisa mais simples. Ele começa do primeiro item de uma lista e continua a percorrer cada elemento sequencialmente até encontrar um correspondente ou até ter verificado todos os itens. É fácil de entender e implementar. No entanto, para listas grandes, a pesquisa sequencial pode ser ineficiente, pois, na pior das hipóteses, cada elemento da lista precisa ser verificado. A complexidade de tempo da pesquisa sequencial é O(n)
+
 def scan(alist, key):
     N = len(alist)  # Obtém o tamanho da lista alist
     for i in range(0, N):  # Itera sobre todos os elementos da lista

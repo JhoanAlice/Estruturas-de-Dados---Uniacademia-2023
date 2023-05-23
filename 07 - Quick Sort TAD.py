@@ -1,3 +1,5 @@
+# 7. **Quick Sort TAD (Tipos Abstratos de Dados):** Esta é outra implementação do Quick Sort que utiliza conceitos de Tipos Abstratos de Dados. Mais uma vez, a performance e complexidade de tempo são as mesmas do Quick Sort regular.
+
 # Função para trocar elementos de posição i e j na lista alist
 def swap(alist, i, j):
     temp = alist[i]  # Armazenar temporariamente o valor na posição i

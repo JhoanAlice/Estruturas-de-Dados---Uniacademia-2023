@@ -1,3 +1,5 @@
+# 2. **Selection Sort:** Este algoritmo divide a lista entre uma parte ordenada e uma parte não ordenada. A cada iteração, o algoritmo encontra o mínimo na parte não ordenada e coloca-o no final da parte ordenada. Assim como o Bubble Sort, o Selection Sort tem uma complexidade de tempo O(n²), o que o torna ineficiente para listas grandes.
+
 # Função para trocar dois elementos de posição em uma lista
 def swap(alist, i, j):
     # Guarda o valor de alist[i] em uma variável temporária

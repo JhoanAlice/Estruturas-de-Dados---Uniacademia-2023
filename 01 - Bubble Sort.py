@@ -1,3 +1,5 @@
+# 1. **Bubble Sort:** Este é um algoritmo simples que percorre repetidamente a lista, troca elementos adjacentes se estiverem na ordem errada e continua o processo até que não haja mais trocas necessárias. Sua principal desvantagem é a ineficiência para listas maiores, pois tem uma complexidade de tempo O(n²).
+
 # Função para trocar dois elementos de posição em uma lista
 def swap(alist, i, j):
     # Guarda o valor de alist[i] em uma variável temporária

@@ -1,3 +1,5 @@
+# 10. **Pesquisa Binária:** A pesquisa binária é uma técnica de pesquisa eficiente que trabalha dividindo repetidamente a lista pela metade. Se a lista está ordenada, a pesquisa binária começa verificando o elemento no meio da lista. Se o elemento do meio é menor do que o item de pesquisa, só a metade superior é necessária e a metade inferior da lista é descartada. Se o elemento do meio é maior, a metade inferior da lista é considerada. Esse processo continua até encontrar o item desejado ou até que não haja mais elementos a serem verificados. A complexidade de tempo da pesquisa binária é O(log n).
+
 def iterativeBinarySearch(alist, key):
     N = len(alist)  # Obtém o tamanho da lista alist
     low = 0  # Inicializa a posição de baixo com 0

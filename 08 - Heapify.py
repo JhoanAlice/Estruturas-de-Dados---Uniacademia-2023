@@ -1,3 +1,6 @@
+# 8. **Heap Sort (Heapify):** Heapify é um processo de construção de um Heap a partir de um determinado array, o qual é um passo fundamental do algoritmo Heap Sort. Este algoritmo transforma a lista em um Heap, e então extrai o maior elemento (a raiz do Heap) várias vezes até que o Heap esteja vazio, resultando em uma lista ordenada. A complexidade de tempo do Heap Sort é O(n log n).
+
+
 # Função para garantir a propriedade de max heap (pai é maior que os filhos)
 def heapify(arr, n, i):
     largest = i  # Inicializar o maior como raiz

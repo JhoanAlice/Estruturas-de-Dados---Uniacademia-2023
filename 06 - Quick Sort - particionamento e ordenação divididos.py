@@ -1,3 +1,5 @@
+# 6. **Quick Sort com particionamento e ordenação divididos:** Essa é apenas uma implementação específica do Quick Sort, onde as funções de partição e ordenação são separadas para maior clareza. A performance e complexidade de tempo são as mesmas do Quick Sort regular.
+
 # Função para trocar os elementos de posição i e j na lista alist
 def swap(alist, i, j):  
     temp = alist[i]  # Armazena o valor do elemento na posição i em uma variável temporária

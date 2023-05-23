@@ -1,3 +1,5 @@
+# 4. **Merge Sort:** Este é um exemplo de algoritmo de ordenação por divisão e conquista. Ele divide a lista em duas metades, ordena as duas metades independentemente e, depois, mescla as metades ordenadas. O Merge Sort tem uma complexidade de tempo O(n log n), que é muito melhor do que a dos algoritmos anteriores para listas grandes.
+
 # Função para mesclar duas sublistas ordenadas
 def merge(lado_esq, lado_dir):
     # Cria uma lista vazia para armazenar o resultado

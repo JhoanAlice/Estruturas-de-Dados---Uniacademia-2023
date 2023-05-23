@@ -1,3 +1,5 @@
+# 11. Comparando as duas técnicas, a pesquisa sequencial é mais adequada para listas menores ou listas não ordenadas, pois não requer qualquer ordenação prévia. Por outro lado, a pesquisa binária é significativamente mais eficiente para listas grandes, mas exige que a lista esteja ordenada antes da pesquisa. Se você já sabe que sua lista estará ordenada, ou se a lista é suficientemente grande que a economia de tempo da pesquisa binária compensa o tempo de ordenação, então a pesquisa binária é geralmente a melhor escolha.
+
 # PESQUISA SEQUENCIAL
 
 def scan(alist, key):

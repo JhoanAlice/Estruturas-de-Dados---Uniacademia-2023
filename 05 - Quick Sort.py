@@ -1,3 +1,5 @@
+# 5. **Quick Sort:** Assim como o Merge Sort, o Quick Sort também é um algoritmo de divisão e conquista. Ele escolhe um elemento como pivô, rearranja a lista de modo que todos os elementos menores que o pivô venham antes e todos os elementos maiores venham depois (isso é chamado de partição), e então ordena as duas sublistas de forma independente. O Quick Sort tem uma complexidade de tempo média de O(n log n), mas no pior caso pode chegar a O(n²).
+
 # Função para trocar os elementos de posição i e j na lista alist
 def swap(alist, i, j):  
     temp = alist[i]  # Armazena o valor do elemento na posição i em uma variável temporária
