@@ -1,33 +1,5 @@
 # 11. Comparando as duas técnicas, a pesquisa sequencial é mais adequada para listas menores ou listas não ordenadas, pois não requer qualquer ordenação prévia. Por outro lado, a pesquisa binária é significativamente mais eficiente para listas grandes, mas exige que a lista esteja ordenada antes da pesquisa. Se você já sabe que sua lista estará ordenada, ou se a lista é suficientemente grande que a economia de tempo da pesquisa binária compensa o tempo de ordenação, então a pesquisa binária é geralmente a melhor escolha.
 
-# PESQUISA SEQUENCIAL
-
-def scan(alist, key):
-    N = len(alist)  # Obtém o tamanho da lista alist
-    for i in range(0, N):  # Itera sobre todos os elementos da lista
-        if alist[i] == key:  # Se o elemento na posição i é igual à chave, retorna o índice
-            return i
-        elif key < alist[i]:  # Se a chave é menor que o elemento na posição i, a chave não está na lista
-            return -1  # Retorna -1 para indicar que a chave não foi encontrada
-    return -1  # Retorna -1 se a chave não foi encontrada após percorrer toda a lista
-  
-  # PESQUISA BINARIA
-  
-def iterativeBinarySearch(alist, key):
-    N = len(alist)  # Obtém o tamanho da lista alist
-    low = 0  # Inicializa a posição de baixo com 0
-    high = N - 1  # Inicializa a posição de cima com N - 1
-
-    while low <= high:  # Enquanto a posição de baixo for menor ou igual à posição de cima
-        mid = (low + high) // 2  # Calcula a posição do meio
-        if alist[mid] == key:  # Se o elemento na posição do meio é igual à chave, retorna o índice
-            return mid
-        elif key < alist[mid]:  # Se a chave é menor que o elemento na posição do meio, ajusta a posição de cima
-            high = mid - 1
-        else:  # Se a chave é maior que o elemento na posição do meio, ajusta a posição de baixo
-            low = mid + 1
-    return -1  # Retorna -1 se a chave não foi encontrada
-  
 # Atividades
 # ● Implemente as pesquisas abaixo:
 # A)Pesquisa Sequencial
@@ -39,16 +11,46 @@ def iterativeBinarySearch(alist, key):
 # ● Faça a mesma análise de tempo com uma lista de 30 itens
 # desordenada, sendo ordenada pelo bubbleSort e pelo quickSort.
 # Qual o tempo melhor entre os 2, para ordenação + pesquisa binária?
+
+# PESQUISA SEQUENCIAL
+def scan(alist, key):
+    # Obtém o tamanho da lista alist
+    N = len(alist)  
+    # Itera sobre todos os elementos da lista
+    for i in range(0, N):  
+        # Se o elemento na posição i é igual à chave, retorna o índice
+        if alist[i] == key:  
+            return i
+        # Se a chave é menor que o elemento na posição i, a chave não está na lista
+        elif key < alist[i]:  
+            return -1  # Retorna -1 para indicar que a chave não foi encontrada
+    return -1  # Retorna -1 se a chave não foi encontrada após percorrer toda a lista
+  
+# PESQUISA BINARIA
+def iterativeBinarySearch(alist, key):
+    # Obtém o tamanho da lista alist
+    N = len(alist)  
+    # Inicializa a posição de baixo com 0
+    low = 0  
+    # Inicializa a posição de cima com N - 1
+    high = N - 1  
+
+    while low <= high:  # Enquanto a posição de baixo for menor ou igual à posição de cima
+        mid = (low + high) // 2  # Calcula a posição do meio
+        if alist[mid] == key:  # Se o elemento na posição do meio é igual à chave, retorna o índice
+            return mid
+        elif key < alist[mid]:  # Se a chave é menor que o elemento na posição do meio, ajusta a posição de cima
+            high = mid - 1
+        else:  # Se a chave é maior que o elemento na posição do meio, ajusta a posição de baixo
+            low = mid + 1
+    return -1  # Retorna -1 se a chave não foi encontrada
   
 import random
-
-# Gerando uma lista de 30 números aleatórios entre 1 e 100 e ordenando
-lista = sorted([random.randint(1, 100) for _ in range(30)])
-print("Lista ordenada de 30 números:", lista)
-
-# Comparação dos tempos de execução da pesquisa sequencial e binária:
-
 import time
+
+# Gerando uma lista de 30 números únicos aleatórios entre 1 e 100 e ordenando
+lista = sorted(random.sample(range(1, 101), 30))
+print("Lista ordenada de 30 números:", lista)
 
 key = random.choice(lista)  # Escolhendo um número aleatório da lista como chave
 
@@ -64,8 +66,7 @@ index = iterativeBinarySearch(lista, key)
 end_time = time.time()
 print(f"A pesquisa binária encontrou a chave {key} na posição {index} em {end_time - start_time} segundos.")
 
-# Comparação do tempo de execução para ordenar uma lista desordenada usando Bubble Sort e Quick Sort, seguido de uma pesquisa binária:
-
+# Função Bubble Sort
 def bubble_sort(alist):
     for pass_num in range(len(alist) - 1, 0, -1):
         for i in range(pass_num):
@@ -73,18 +74,18 @@ def bubble_sort(alist):
                 alist[i], alist[i + 1] = alist[i + 1], alist[i]
     return alist
 
+# Função Quick Sort
 def quick_sort(alist):
     if len(alist) <= 1:
         return alist
-    else:
+    else:        
         pivot = alist[0]
         less = [i for i in alist[1:] if i <= pivot]
         greater = [i for i in alist[1:] if i > pivot]
         return quick_sort(less) + [pivot] + quick_sort(greater)
 
-
-# Gerando uma lista de 30 números aleatórios desordenados entre 1 e 100
-desordenada = [random.randint(1, 100) for _ in range(30)]
+# Gerando uma lista de 30 números únicos aleatórios entre 1 e 100
+desordenada = random.sample(range(1, 101), 30)
 
 # Ordenando a lista desordenada usando Bubble Sort e executando a pesquisa binária
 start_time = time.time()
@@ -100,5 +101,5 @@ index = iterativeBinarySearch(ordenada_quick, key)
 end_time = time.time()
 print(f"Quick Sort e pesquisa binária levaram {end_time - start_time} segundos.")
 
-
+       
 # O Quick Sort geralmente tem um desempenho melhor do que o Bubble Sort para listas maiores, devido à sua complexidade de tempo média O(n log n) em comparação com a complexidade de tempo quadrático O(n^2) do Bubble Sort. No entanto, o desempenho exato pode variar dependendo da implementação específica e da distribuição dos dados na lista.
