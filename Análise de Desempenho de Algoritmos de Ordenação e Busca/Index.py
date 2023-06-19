@@ -1,32 +1,19 @@
-import time
-from performance_algorithms import bubble_sort
-from performance_algorithms import select_sort
-from performance_algorithms import insert_sort
-from performance_algorithms import merge_sort
-from performance_algorithms import quick_sort
-from performance_algorithms import quick_sort_tad
-from performance_algorithms import heap_sort
-from performance_algorithms import sequential_search
-from performance_algorithms import binary_search
-
-def read_file(filename):
-    with open(filename, 'r') as file:
-        content = [int(x) for x in file.read().split()]
-    return content
-
-def measure_execution_time(func, *args):
-    start_time = time.time()
-    result = func(*args)
-    end_time = time.time()
-    return end_time - start_time
+import os
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+from performance_algorithms import bubble_sort, select_sort, insert_sort, merge_sort
+from performance_algorithms import quick_sort, quick_sort_tad, heap_sort
+from performance_algorithms import sequential_search, binary_search, measure_execution_time, read_file
+from performance_algorithms import adicionar_a_lista, remover_da_lista, procurar_na_lista
+from performance_algorithms import adicionar_a_pilha, remover_da_pilha
+from performance_algorithms import adicionar_a_fila, remover_da_fila
 
 
 def main():
     filenames = [
-        ("small_data.txt", "Small Data"),
-        ("large_data.txt", "Large Data"),
-        ("sorted_data.txt", "Sorted Data"),
-        ("reversed_data.txt", "Reversed Data"),
+        ("small_data.txt", "Dados Pequenos"),
+        ("large_data.txt", "Dados Grandes"),
+        ("sorted_data.txt", "Dados Ordenados"),
+        ("reversed_data.txt", "Dados Invertidos"),
     ]
 
     sort_algorithms = [
@@ -40,24 +27,38 @@ def main():
     ]
 
     search_algorithms = [
-        ("Sequential search", sequential_search),
-        ("Binary search", binary_search),
+        ("Busca Sequencial", sequential_search),
+        ("Busca Binária", binary_search),
+    ]
+
+    data_structures = [
+        ("Lista", [adicionar_a_lista, remover_da_lista, procurar_na_lista]),
+        ("Pilha", [adicionar_a_pilha, remover_da_pilha]),
+        ("Fila", [adicionar_a_fila, remover_da_fila]),
     ]
 
     for filename, description in filenames:
         print(f"\n{description}:")
-
         data = read_file(filename)
 
         for sort_name, sort_func in sort_algorithms:
             sort_time = measure_execution_time(sort_func, data.copy())
-            print(f"{sort_name} time: {sort_time:.5f} seconds")
+            print(f"Tempo {sort_name}: {sort_time:.5f} segundos")
 
         sorted_data = sorted(data)
 
         for search_name, search_func in search_algorithms:
             search_time = measure_execution_time(search_func, sorted_data, sorted_data[-1])
-            print(f"{search_name} time: {search_time:.5f} seconds")
+            print(f"Tempo {search_name}: {search_time:.5f} segundos")
+
+        for data_structure_name, operations in data_structures:
+            print(f"\n{data_structure_name}:")
+            for operation in operations:
+                if operation == remover_da_pilha or operation == remover_da_fila:
+                    exec_time = measure_execution_time(operation, data.copy())
+                else:
+                    exec_time = measure_execution_time(operation, data.copy(), data[-1])
+                print(f"Tempo de execução {operation.__name__}: {exec_time:.5f} segundos")
 
 
 if __name__ == "__main__":
