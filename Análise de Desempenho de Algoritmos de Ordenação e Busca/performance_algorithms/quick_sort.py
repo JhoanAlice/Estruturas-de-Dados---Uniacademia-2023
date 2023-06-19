@@ -1,22 +1,30 @@
-def quick_sort(arr, low=0, high=None):
-    if high is None:
-        high = len(arr) - 1
+def quick_sort(arr):
+    stack = [(0, len(arr) - 1)]
 
-    def partition(arr, low, high):
-        pivot = arr[high]
-        i = low - 1
-
-        for j in range(low, high):
-            if arr[j] <= pivot:
-                i = i + 1
-                arr[i], arr[j] = arr[j], arr[i]
-        arr[i+1], arr[high] = arr[high], arr[i+1]
-        return i + 1
-
-    def _quick_sort(arr, low, high):
+    while stack:
+        low, high = stack.pop()
         if low < high:
-            pivot_index = partition(arr, low, high)
-            _quick_sort(arr, low, pivot_index - 1)
-            _quick_sort(arr, pivot_index + 1, high)
+            pivot_index = _partition(arr, low, high)
+            if low < pivot_index - 1:
+                stack.append((low, pivot_index - 1))
+            if pivot_index + 1 < high:
+                stack.append((pivot_index + 1, high))
 
-    return _quick_sort(arr, low, high)
+def _partition(arr, low, high):
+    pivot = arr[low]
+    left = low + 1
+    right = high
+
+    done = False
+    while not done:
+        while left <= right and arr[left] <= pivot:
+            left = left + 1
+        while arr[right] >= pivot and right >= left:
+            right = right - 1
+        if right < left:
+            done = True
+        else:
+            arr[left], arr[right] = arr[right], arr[left]
+    
+    arr[low], arr[right] = arr[right], arr[low]
+    return right
