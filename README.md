@@ -1,6 +1,6 @@
-# Estruturas de Dados - Uniacademia 2023
+# Estruturas de Dados - UniAcademia 2023
 
-Materiais referentes à Disciplina de Estrutura de Dados do Uniacademia - 2023
+Materiais referentes à Disciplina de Estrutura de Dados do UniAcademia - 2023
 Prof. Me. Jacimar Fernandes Tavares
 
 Códigos desenvolvidos pelos alunos: 
