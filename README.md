@@ -2,7 +2,10 @@
 
 Materiais referentes à Disciplina de Estrutura de Dados do Uniacademia - 2023
 Prof. Me. Jacimar Fernandes Tavares
-Códigos desenvolvidos pelos alunos - Jhoan Alice Franco e Lucas Piccinini Gonzaga
+
+Códigos desenvolvidos pelos alunos: 
+Jhoan Alice Franco 
+Lucas Piccinini Gonzaga
 
 ## Projeto de Análise de Desempenho de Algoritmos e Estruturas de Dados
 
