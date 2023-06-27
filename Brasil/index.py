@@ -464,7 +464,7 @@ while True:
         while True:
             opcao = input("Digite a opção desejada: ")
 
-    if opcao == '15':
+    elif opcao == '15':
         root = None
         item = input("Digite o item a ser inserido: ")
         root = insert(root, item)
