@@ -1,80 +1,42 @@
-# Estruturas de Dados - UniAcademia 2023
+# Projeto de Estrutura de Dados - UniAcademia 2023
 
-Materiais referentes à Disciplina de Estrutura de Dados do UniAcademia - 2023
-Prof. Me. Jacimar Fernandes Tavares
+Este é um projeto acadêmico desenvolvido pelos alunos Jhoan Alice Franco e Lucas Piccinini Gonzaga, sob a orientação do Prof. Me. Jacimar Fernandes Tavares, como parte da disciplina de Estrutura de Dados do UniAcademia - 2023.
 
-Códigos desenvolvidos pelos alunos: 
-Jhoan Alice Franco e Lucas Piccinini Gonzaga
+## Descrição
 
-## Projeto de Análise de Desempenho de Algoritmos e Estruturas de Dados
+Este projeto consiste em um código Python que processa, ordena e busca informações em um dataset contendo dados de cidades, estados e distritos. O código utiliza diferentes técnicas de ordenação e busca, e permite interação com o usuário para determinar as operações a serem realizadas.
 
-Este projeto consiste em uma análise de desempenho de algoritmos de ordenação, algoritmos de busca e algumas estruturas de dados em diferentes conjuntos de dados.
+## Execução
 
-## Funcionalidades
+Para executar o projeto, siga as etapas abaixo:
 
-O programa oferece as seguintes funcionalidades:
+1. Certifique-se de ter o Python instalado em sua máquina.
 
-- Leitura de diferentes conjuntos de dados a partir de arquivos de texto.
-- Medição do tempo de execução dos algoritmos de ordenação nos conjuntos de dados.
-- Identificação do algoritmo de ordenação mais rápido para cada conjunto de dados.
-- Medição do tempo de execução dos algoritmos de busca nos conjuntos de dados ordenados.
-- Identificação do algoritmo de busca mais rápido para cada conjunto de dados ordenado.
-- Medição do tempo de execução das operações em algumas estruturas de dados (lista, pilha e fila) nos conjuntos de dados.
+2. Clone este repositório em sua máquina local.
 
-## Requisitos
+3. Abra um terminal e navegue até o diretório onde o projeto foi clonado.
 
-Para executar o programa, é necessário ter o Python 3 instalado.
+4. Execute o arquivo python `index.py` no diretório "BRASIL - TRABALHO FINAL" utilizando o seguinte comando:
 
-## Como Executar
 
-1. Faça o download do projeto para o seu ambiente local.
-2. Navegue até o diretório raiz do projeto.
-3. Execute o seguinte comando no terminal:
+5. Siga as instruções apresentadas no terminal para interagir com o projeto.
 
-   ```
-   python index.py
-   ```
+## Conteúdo do Repositório
 
-4. O programa executará a análise de desempenho nos diferentes conjuntos de dados e exibirá os resultados no console.
+O repositório contém os seguintes arquivos:
 
-## Conjuntos de Dados
-
-O programa utiliza os seguintes conjuntos de dados:
-
-- small_data.txt: Dados Pequenos
-- sorted_data.txt: Dados Ordenados
-- large_data.txt: Dados Grandes
-- reversed_data.txt: Dados Invertidos
-- reversed_large_data.txt: Dados Invertidos Grandes
-- sorted_large_data.txt: Dados Ordenados Grandes
-
-## Algoritmos de Ordenação
-
-O programa utiliza os seguintes algoritmos de ordenação:
-
-- Bubble Sort
-- Select Sort
-- Insert Sort
-- Merge Sort
-- Quick Sort
-- Quick Sort TAD
-- Heap Sort
-
-## Algoritmos de Busca
-
-O programa utiliza os seguintes algoritmos de busca:
-
-- Busca Sequencial
-- Busca Binária
-
-## Estruturas de Dados
-
-O programa utiliza as seguintes estruturas de dados:
-
-- Lista: implementada com as operações adicionar_a_lista, remover_da_lista e procurar_na_lista.
-- Pilha: implementada com as operações adicionar_a_pilha e remover_da_pilha.
-- Fila: implementada com as operações adicionar_a_fila e remover_da_fila.
+- `index.py`: O arquivo principal contendo o código-fonte do projeto.
+- `planilha.xlsx`: O arquivo do dataset utilizado pelo projeto.
+- `README.md`: Este arquivo de documentação.
 
 ## Contribuição
 
-Contribuições para melhorias e novas funcionalidades são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
+Contribuições são bem-vindas! Sinta-se à vontade para fazer fork deste repositório e enviar pull requests com melhorias, correções de bugs, ou qualquer outra forma de aprimorar o projeto.
+
+## Contato
+
+Em caso de dúvidas ou sugestões, entre em contato com os desenvolvedores:
+
+## Licença
+
+Este projeto é licenciado sob a [MIT License](LICENSE).

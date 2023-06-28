@@ -1,6 +1,0 @@
-Coisas para fazer no codigo:
-
-1. Melhorar os prints finais, quando imprimir o resultado, apresentar as escolhas feitas para o usuario poder comparar facilmente oque ele escolheu em cada situação para obter determinado resultado
-2. Adicionar mais opções de busca e ordenação
-3. Limpar a tabela uma vez que sentirmos estar com o programa completo
-4. Fazer o slide
